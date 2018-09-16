@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Cadastro de Cursos - Menu de Opções</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+    <header>
+        <p>Bem-vindo,
+            <%= usuario.nome %>
+        </p>
+        <h1>Menu de Opções</h1>
+        <h4>Escolha sua opção</h4>
+    </header>
+    <section>
+        <ul>
+            <li>
+                <a href="/cadCurso">Cadastro de Cursos</a>
+            </li>
+            <li>
+                <a href="/listaCursos">Lista de Cursos</a>
+            </li>
+        </ul>
+    </section>
+    <section>
+        <a href='/logout'>Logout</a>
+    </section>
+    <footer>
+        <small>Sistema de Cadastro de Cursos</small>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Cadastro de Cursos - Login</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+    <header>
+        <p>Bem-vindo,
+            <%= usuario.nome %>
+        </p>
+        <h1>Lista de Cursos</h1>
+        <h4>Selecione uma opção na lista para executá-la</h4>
+    </header>
+    <section>
+        <!--será implementado em breve-->
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Descrição</th>
+                    <th>Carga horária</th>
+                    <th>Categoria</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% cursos.forEach(function(curso, index) { %>
+                    <tr>
+                        <td><%= curso.codigo %></td>
+                        <td><%= curso.descricao %></td>
+                        <td><%= curso.ch %></td>
+                        <td><%= curso.categoria %></td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </section>
+    <form action="/menu" method="get" class="voltar">
+        <button type="submit">Voltar</button>
+    </form>
+    <footer>
+        <small>Sistema de Cadastro de Cursos</small>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Cadastro de Cursos - Login</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+    <header>
+        <p>Bem-vindo,
+            <%= usuario.nome %>
+        </p>
+        <h1>Cadastro de Cursos</h1>
+        <h4>Forneça os dados para o cadastro</h4>
+    </header>
+    <section>
+        <form action="/novoCurso" method="post">
+            Código:
+            <br />
+            <input type="text" name="curso[codigo]" placeholder="Código">
+            <br>Descrição:
+            <br />
+            <input type="text" name="curso[descricao]" placeholder="Descrição">
+            <br> CH:
+            <br />
+            <input type="text" name="curso[ch]" placeholder="CH">
+            <br> Categoria:
+            <br />
+            <select type="text" name="curso[categoria]" placeholder="Responsável">
+                <option value="">Selecione uma categoria</option>
+                <option value="Desenvolvimento">Desenvolvimento</option>
+                <option value="UX">User Experience</option>
+                <option value="Desgin Thinking">Designin Thinking</option>
+                <option value="SOA">SOA</option>
+                <option value="Metodos ageis">Métodos ágeis</option>
+            </select>
+            <br>
+            <button type="submit">Enviar</button>
+        </form>
+        <form action="/menu" method="get">
+            <button type="submit">Voltar</button>
+        </form>
+    </section>
+    <footer>
+        <small>Sistema de Cadastro de Cursos</small>
+    </footer>
+</body>
+
+</html>
